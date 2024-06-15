@@ -17,3 +17,5 @@ TARGET_UPSTREAM = ""
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
 route = { pattern = "docker-staging.murmure.uk", custom_domain = true }
+
+compatibility_date = “2024-06-15”
