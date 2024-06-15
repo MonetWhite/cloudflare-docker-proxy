@@ -1,15 +1,3 @@
-name = "cloudflare-docker-proxy"
-compatibility_date = "2023-12-01"
-
-[dev]
-ip = "0.0.0.0"
-port = 8787
-local_protocol = "http"
-
-[env.dev.vars]
-MODE = "debug"
-TARGET_UPSTREAM = "https://registry-1.docker.io"
-
 [env.production]
 name = "cloudflare-docker-proxy"
 routes = [
@@ -29,7 +17,3 @@ TARGET_UPSTREAM = ""
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
 route = { pattern = "docker-staging.murmure.uk", custom_domain = true }
-
-[env.staging.vars]
-MODE = "staging"
-TARGET_UPSTREAM = ""
